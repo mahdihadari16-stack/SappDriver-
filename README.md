@@ -1,5 +1,3 @@
-from kivymd.app import MDApp
-from kivy.uix.screenmanager import ScreenManager
 class SnappDriverApp(MDApp):
     def build(self):
         self.manager = ScreenManager()
