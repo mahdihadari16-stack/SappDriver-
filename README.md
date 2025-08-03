@@ -1,23 +1,16 @@
-# SappDriver-
-اپلیکیشن رانندگان اسنپ با استفاده از KivyMD برای دریافت سفر، نمایش داشبورد راننده و ارتباط با مسافر
-
-from kivy.app import App
 from kivymd.app import MDApp
-from kivymd.uix.screen import Screen
-from kivymd.uix.button import MDRaisedButton
-from kivymd.uix.label import MDLabel
+from kivy.uix.screenmanager import ScreenManager
+from screens.driver_page import DriverPage
+from screens.passenger_page import PassengerPage
+from screens.ride_request_page import RideRequestPage
 
-class MainApp(MDApp):
+class SnappDriverApp(MDApp):
     def build(self):
-        screen = Screen()
-        
-        # Add a welcome label
-        screen.add_widget(MDLabel(text="Welcome to Snapp Driver", halign="center"))
-        
-        # Add a start button
-        screen.add_widget(MDRaisedButton(text="Start", pos_hint={"center_x": 0.5, "center_y": 0.4}))
-        
-        return screen
+        self.manager = ScreenManager()
+        self.manager.add_widget(DriverPage(name="driver"))
+        self.manager.add_widget(PassengerPage(name="passenger"))
+        self.manager.add_widget(RideRequestPage(name="ride_request"))
+        return self.manager
 
 if __name__ == "__main__":
-    MainApp().run()
+    SnappDriverApp().run()
