@@ -1,10 +1,20 @@
-class SnappDriverApp(MDApp):
+from kivy.app import App
+from kivymd.app import MDApp
+from kivymd.uix.screen import Screen
+from kivymd.uix.button import MDRaisedButton
+from kivymd.uix.label import MDLabel
+
+class MainApp(MDApp):
     def build(self):
-        self.manager = ScreenManager()
-        self.manager.add_widget(DriverPage(name="driver"))
-        self.manager.add_widget(PassengerPage(name="passenger"))
-        self.manager.add_widget(RideRequestPage(name="ride_request"))
-        return self.manager
+        screen = Screen()
+        
+        # Add a welcome label
+        screen.add_widget(MDLabel(text="Welcome to Snapp Driver", halign="center"))
+        
+        # Add a start button
+        screen.add_widget(MDRaisedButton(text="Start", pos_hint={"center_x": 0.5, "center_y": 0.4}))
+        
+        return screen
 
 if __name__ == "__main__":
-    SnappDriverApp().run()
+    MainApp().run()
