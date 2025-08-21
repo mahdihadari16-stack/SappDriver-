@@ -36,7 +36,7 @@ logging
 asyncio
 
 # Encryption (for secure data)
-cryptography==41.0.7
+cryptography==44.0.1
 
 # Build tools (for creating APK)
 buildozer==1.5.0
