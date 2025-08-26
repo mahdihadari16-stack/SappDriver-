@@ -1,39 +1,36 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python application
+# نصب Python 3.12 از deadsnakes PPA
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install -y \
+    python3.12 \
+    python3.12-dev \
+    python3.12-venv \
+    python3-pip \
+    python3-setuptools
 
-on:
-  push:
-    branches: [ "main.py" ]
-  pull_request:
-    branches: [ "main.py" ]
+# تنظیم Python 3.12 به عنوان default
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+sudo update-alternatives --config python3
 
-permissions:
-  contents: read
+# نصب pip برای Python 3.12
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.12 get-pip.py
+rm get-pip.py
 
-jobs:
-  build:
+# نصب ابزارهای Python
+pip3 install --upgrade \
+    pip \
+    setuptools \
+    wheel \
+    poetry \
+    pipenv \
+    black \
+    flake8 \
+    pytest \
+    uvicorn \
+    fastapi
 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pytest
+# تأیید نصب
+python3 --version  # باید 3.12.x باشد
+pip3 --version
