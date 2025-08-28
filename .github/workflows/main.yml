@@ -1,0 +1,120 @@
+name: Driver App CI/CD
+
+
+
+on:
+
+  push:
+
+    branches: [ main, develop, feature/* ]
+
+  pull_request:
+
+    branches: [ main, develop ]
+
+
+
+jobs:
+
+  security-scan:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v5
+
+      - name: Security vulnerability scan
+
+        run: |
+
+          npm audit --audit-level high
+
+          # Custom security checks for driver data
+
+          
+
+  android-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v5
+
+      - name: Setup Android SDK
+
+        uses: android-actions/setup-android@v3
+
+      - name: Build Android
+
+        run: |
+
+          ./gradlew assembleDebug
+
+          ./gradlew testDebugUnitTest
+
+          
+
+  ios-build:
+
+    runs-on: macos-latest
+
+    steps:
+
+      - uses: actions/checkout@v5
+
+      - name: Setup iOS
+
+        uses: actions/setup-node@v4
+
+      - name: Build iOS
+
+        run: |
+
+          cd ios && xcodebuild -workspace DriverApp.xcworkspace -scheme DriverApp -configuration Debug -sdk iphonesimulator
+
+          
+
+  performance-test:
+
+    runs-on: ubuntu-latest
+
+    needs: [android-build, ios-build]
+
+    steps:
+
+      - name: Performance benchmarks
+
+        run: |
+
+          # Battery usage tests
+
+          # Memory leak detection
+
+          # Network efficiency tests
+
+          # GPS accuracy tests
+
+```
+
+            - نام: راه‌اندازی .NET Core SDK
+  موارد استفاده: actions/setup-dotnet@v3.4.2
+  با:
+    # نسخه(های) SDK اختیاری برای استفاده. در صورت عدم ارائه، نسخه global.json در صورت موجود بودن نصب خواهد شد. مثال‌ها: 2.2.104، 3.1، 3.1.x، 3.x، 6.0.2xx
+    نسخه دات نت: # اختیاری
+    # کیفیت ساخت اختیاری. مقادیر ممکن عبارتند از: روزانه، امضا شده، معتبر، پیش‌نمایش، ga.
+    کیفیت دات‌نت: # اختیاری
+    # مکان اختیاری global.json، اگر global.json شما در ریشه مخزن قرار ندارد.
+    فایل-json-جهانی: # اختیاری
+    # منبع بسته اختیاری برای تنظیم احراز هویت. هرگونه NuGet.config موجود در ریشه مخزن را بررسی کرده و یک NuGet.config موقت با استفاده از متغیر محیطی NUGET_AUTH_TOKEN به عنوان ClearTextPassword ارائه می‌دهد.
+    آدرس منبع: # اختیاری
+    # مالک اختیاری برای استفاده از بسته‌های سازمان‌ها/کاربران رجیستری بسته گیت‌هاب غیر از مالک مخزن فعلی. فقط در صورتی استفاده می‌شود که URL GPR نیز در source-url ارائه شده باشد.
+    مالک: # اختیاری
+    # مکان NuGet.config اختیاری است، اگر NuGet.config شما در ریشه مخزن قرار ندارد.
+    فایل پیکربندی: # اختیاری
+    # ورودی اختیاری برای فعال کردن ذخیره سازی پوشه بسته های سراسری NuGet
+    حافظه پنهان: # اختیاری
+    # برای مشخص کردن مسیر فایل وابستگی استفاده می‌شود: packages.lock.json. از کاراکترهای wildcard یا لیستی از نام فایل‌ها برای ذخیره‌سازی چندین وابستگی پشتیبانی می‌کند.
+    مسیر وابستگی به حافظه پنهان: # اختیاری
+          

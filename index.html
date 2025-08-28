@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات حرفه‌ای - راهکارهای نوین کسب و کار</title>
+    <meta name="description" content="ارائه خدمات حرفه‌ای و راهکارهای نوین کسب و کار. بهترین کیفیت با قیمت مناسب. تماس بگیرید: ۰۹۱۲۳۴۵۶۷۸۹">
+    <meta name="keywords" content="خدمات حرفه‌ای, کسب و کار, مشاوره, راهکار, نوین">
+    <meta name="author" content="شرکت خدمات حرفه‌ای">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="خدمات حرفه‌ای - راهکارهای نوین کسب و کار">
+    <meta property="og:description" content="ارائه خدمات حرفه‌ای و راهکارهای نوین کسب و کار">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="خدمات حرفه‌ای - راهکارهای نوین کسب و کار">
+    <meta property="twitter:description" content="ارائه خدمات حرفه‌ای و راهکارهای نوین کسب و کار">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "شرکت خدمات حرفه‌ای",
+      "description": "ارائه خدمات حرفه‌ای و راهکارهای نوین کسب و کار",
+      "telephone": "09164321660",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IR",
+        "addressLocality": "بندرعباس"
+      }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            animation: slideDown 1s ease-out;
+        }
+        
+        .logo {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .logo p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .contact h3 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 30px 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 2s ease-out 1s forwards;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>خدمات حرفه‌ای</h1>
+                <p>راهکارهای نوین کسب و کار</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#services">خدمات</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <h2>بهترین راهکارها برای کسب و کار شما</h2>
+                <p>ما با تجربه‌ای بیش از ۱۰ سال، خدمات حرفه‌ای و مشاوره‌های تخصصی ارائه می‌دهیم. با استفاده از جدیدترین تکنولوژی‌ها و روش‌های نوین، کسب و کار شما را به موفقیت می‌رسانیم.</p>
+                <a href="#contact" class="cta-button">همین حالا تماس بگیرید</a>
+            </section>
+
+            <section class="services" id="services">
+                <div class="service-card">
+                    <h3>مشاوره کسب و کار</h3>
+                    <p>ارائه مشاوره‌های تخصصی برای رشد و توسعه کسب و کار شما. تحلیل بازار، برنامه‌ریزی استراتژیک و راهکارهای عملی.</p>
+                </div>
+                <div class="service-card">
+                    <h3>طراحی وب سایت</h3>
+                    <p>طراحی و توسعه وب سایت‌های مدرن، واکنش‌گرا و بهینه‌سازی شده برای موتورهای جست‌وجو.</p>
+                </div>
+                <div class="service-card">
+                    <h3>دیجیتال مارکتینگ</h3>
+                    <p>تبلیغات هدفمند در فضای دیجیتال، بهینه‌سازی SEO، مدیریت شبکه‌های اجتماعی و افزایش فروش آنلاین.</p>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <h3>با ما در تماس باشید</h3>
+                <p>آماده ارائه بهترین خدمات به شما هستیم</p>
+                <div class="contact-info">
+                    <a href="tel:09164321660" class="contact-item">
+                        📞 ۰۹۱۶۴۳۲۱۶۶۰
+                    </a>
+                    <a href="mailto:info@yoursite.com" class="contact-item">
+                        ✉️ info@yoursite.com
+                    </a>
+                    <a href="#" class="contact-item">
+                        📍 بندرعباس، ایران
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; ۲۰۲۵ خدمات حرفه‌ای. تمامی حقوق محفوظ است.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.color = '#333';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.1)';
+                header.style.color = 'white';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Form validation and interaction
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotateY(5deg)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotateY(0deg)';
+            });
+        });
+
+        // Add dynamic content loading
+        setTimeout(() => {
+            const heroText = document.querySelector('.hero p');
+            heroText.innerHTML = 'ما با تجربه‌ای بیش از ۱۰ سال، خدمات حرفه‌ای و مشاوره‌های تخصصی ارائه می‌دهیم. <strong>بیش از ۵۰۰ پروژه موفق</strong> و <strong>رضایت ۹۸٪ مشتریان</strong> گواه کیفیت خدمات ماست.';
+        }, 3000);
+
+        // SEO enhancement - track user interactions
+        function trackUserInteraction(action, element) {
+            // This would typically send data to analytics
+            console.log(`User ${action} on ${element}`);
+        }
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                trackUserInteraction('clicked', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
